@@ -52,11 +52,7 @@ jobs:
       run: terraform plan -input=false
       env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
-    
-    - name: Terraform import
-      run: terraform import module.vpc.module.vpc.google_compute_network.network projects/gitops-project-424508/global/networks/gitops-vpc
-      env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+  
 
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
