@@ -76,4 +76,5 @@ resource "google_compute_subnetwork" "existing_subnetwork" {
     range_name    = "gke-subnetwork-services"
     ip_cidr_range = "10.2.0.0/20"
   }
+  
 }
