@@ -49,7 +49,7 @@ module "gke" {
   horizontal_pod_autoscaling = true
   filestore_csi_driver       = false
   ip_range_pods              = "subnet-01-secondary-01"
-  ip_range_services          = "subnet-01-secondary-02"
+  ip_range_services          = "subnet-01-secondary-01"
 
 
   node_pools = [
