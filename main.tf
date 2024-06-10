@@ -1,5 +1,5 @@
 module "folders" {
-  source = "./folders"
+  source = "./terraform"
 }
 
 
