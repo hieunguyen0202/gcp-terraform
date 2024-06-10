@@ -41,7 +41,12 @@ module "vpc" {
             },
         ]
 
-        subnet-02 = []
+        subnet-02 = [
+            {
+                range_name    = "subnet-02-secondary-02"
+                ip_cidr_range = "192.168.74.0/24"
+            },
+        ]
     }
 
     routes = [
@@ -66,6 +71,22 @@ module "vpc" {
 
 
 
+# resource "google_compute_subnetwork" "subnetwork" {
+#   name          = "us-central1-01"
+#   ip_cidr_range = "10.0.0.0/20"
+#   region        = "us-central1"
+#   network       = google_compute_network.vpc.self_link
+
+#   secondary_ip_range {
+#     range_name    = "us-central1-01-gke-01-pods"
+#     ip_cidr_range = "10.1.0.0/16"
+#   }
+
+#   secondary_ip_range {
+#     range_name    = "us-central1-01-gke-01-services"
+#     ip_cidr_range = "10.2.0.0/20"
+#   }
+# }
 
 
 
