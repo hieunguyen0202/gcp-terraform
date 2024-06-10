@@ -65,7 +65,6 @@ module "vpc" {
   ]
 }
 
-
 # resource "google_compute_subnetwork" "existing_subnetwork" {
 #   name          = "gke-subnetwork"
 #   ip_cidr_range = "10.0.0.0/20"
