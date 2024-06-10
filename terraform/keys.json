@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gitops-project-424508",
+  "private_key_id": "515e7d36441cbd72e2689f75d84fa3166b968058",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpSu7v2inBydf0\nPnhjNdMKfcPG1eIpdiRl5E3Ep4W/fY3zPTjfQNhtnquoRvZSswRQsQqjb7Et8gqU\nfyCt5NH497MBrtIPl96AWdO/ehzzdxdglRaUMD4R3rZPuoB7BYHvBn6fo9kSEF/E\nAafo1OWvhgaBG6tzkE4AMrqlUYknnNKzwdTs2ibpYHXb3k8Na4hbNjoRziz65fnp\nMdT5IQLol4cpDDo12cqlNSzmG+6oN0mriJEDSIeztXCHfmi8sNAU4fHtny6HdniI\nmjr4NdruX1rsXheqAAK6hjArn1l7H4S0HobmSmdgH73AeTlykr935Va3j5EmIn3+\n/z+2/guTAgMBAAECggEACGGBuBnGFgHCNdw6bl3FowJTKZM3qKDyy3yJN+uE5fit\n9sLh2uOOgRIyRr1kmmTrPemxQrSg+QG/hA2bGvws1hCcBVMqIQ1+GNFr5XZeSWa1\nw/3Y6eDfz3wYEZTyM6Tq3s23E+mOesiZBRfKwBMNhHNq100hg+jxqCyRmcC24WE2\nzF7AKuphyveSK5uhpM/0TFuAKnGsAqTZkAqtoq6L7RyGC3lToI9MVEgwUgnaPmzY\nKSla+tVEbqwYTskwYP0CvnRnMoMXcf3JBYXid3MaXpGQg0MIZ2RBJE1ZOew8DHM7\nhwHgBSAOg28IGCeOj2KXFoiPTdXfpntvQF3NmiIemQKBgQDQMv0mDKdeQ0+CUBs+\n6Rv9+hptLozxVB7c0abCGl2l514eUTY5RVvWD5TzZKci8aGgPQbzdvg5Dt5U13hr\nEV5QOZsmxp7bFdmpHn/0h3AnhJjewYswoAyrkr/BtcfAPW0Bd+635lhoxkT/w37x\nsh19TMs6+tsix7WLVb16FsTnpQKBgQDQKTKFVKnCzgUA3d9B1tXtwHmTlbofumna\n0hxfpk88TDRTJQJRRe3OP1qJyjzUh1M8AH7JR7cFGTGuSk9klJyzuktLyN4yjn71\n86+Hi06O3HlPXPyRYfqDMk9EPHzCXSWRhTtZWmisQO5hqqD+gqzcLiDONeB3ctgH\n8n+f0wmA1wKBgQCP2XsBLCMDxRwNXI3GpMd7bq+Nmmk1YLrGNXCzkgX8V+S2q8P8\nRAjU2QVAOd4lDbBvh1rjIuMUgUpqckm4KFLyuSqS2w7tLqap6/HaoS2DkGETH8Ss\n/xhh/03QaGmwUICdUCE3HMce9Ua9NHTkR/2KEmIkyShZWoT71WzKCytXJQKBgFFJ\nRSk7vm8L9Hg6LAyR0EhfeRpgxaXOLbf9hIb1csuhFm3Bbf4+yHZZ1wknqEl17tLn\nfpsrHhUnmXbuHcKxJeApR234qowjiQCSgGD1zV+MSPLs5NQA5sqEwt9qn21m4lzJ\nIjvqSiW51VzePLAmZ0oz2SutblI2zpWL5LqMtpFRAoGAX3KaEFLu+JiN51DvMZjF\nELl7Q02C1xBikdJcZx2+Xr7mR/Aj29aROVbxLcAy+261FHPZkhD3kxYfbh6cPBhq\nBV6Sj2SbG7tvIJ95n9sBjnRccYvZaWBq2DWPDMGONUDyp5zjLYOF0eT5DoboxWGn\na/Xgbewd3ZyykKuCF0UVwlk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gitops-sa@gitops-project-424508.iam.gserviceaccount.com",
+  "client_id": "111021476476765481280",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gitops-sa%40gitops-project-424508.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

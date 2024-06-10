@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:  
+      - terraform/**
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - terraform/**
+
+  workflow_dispatch:
+
+env:
+  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
+  GCP_REGION: us-central1
+  GKE_CLUSTER: gke-cluster
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./terraform
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+
+      - name: Configure Google Cloud Project
+        run: gcloud config set project gitops-project-424508
+
+      - name: Export Google Application Credentials
+        run: |
+          echo "${{ secrets.GCP_SA_KEY }}" > $HOME/key.json
+          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/key.json"
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform init
+        id: init
+        run: terraform init
+      
+      - name: Terraform format
+        id: fmt
+        run: terraform fmt 
+
+      - name: Terraform validate
+        id: validate
+        run: terraform validate
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan -no-color -input=false -out planfile
+        continue-on-error: true
+
+      - name: Terraform plan status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
