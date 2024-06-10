@@ -64,11 +64,11 @@ module "vpc" {
 
 
 
-resource "google_compute_subnetwork" "subnetwork" {
+resource "google_compute_subnetwork" "existing_subnetwork" {
   name          = "gke-subnetwork"
   ip_cidr_range = "10.0.0.0/20"
   region        = "us-central1"
-  network       = "gitops-vpc"
+  network       = module.vpc.network_self_link  # Updated to use the VPC module
 
   secondary_ip_range {
     range_name    = "gke-subnetwork-pods"
