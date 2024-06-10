@@ -22,7 +22,7 @@ terraform {
     }
   }
   backend "gcs" {
-    bucket = "my-gitops-project-state"
+    bucket = "my-gitops-project-state" 
     prefix = "terraform/state"
   }
 
