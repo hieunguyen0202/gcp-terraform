@@ -17,7 +17,7 @@ module "gke" {
   region                     = "us-central1"
   zones                      = ["us-central1-c"]
   network                    = "gitops-vpc"
-  subnetwork                 = "gke-subnetwork"
+  subnetwork                 = module.vpc.network_self_link
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true
