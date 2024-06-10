@@ -39,6 +39,10 @@ module "vpc" {
         range_name    = "subnet-01-secondary-01"
         ip_cidr_range = "192.168.64.0/24"
       },
+      {
+        range_name    = "subnet-01-secondary-02"
+        ip_cidr_range = "192.168.74.0/24"
+      }
     ]
   }
 
@@ -61,19 +65,19 @@ module "vpc" {
   ]
 }
 
-resource "google_compute_subnetwork" "existing_subnetwork" {
-  name          = "gke-subnetwork"
-  ip_cidr_range = "10.0.0.0/20"
-  region        = "us-central1"
-  network       = module.vpc.network_self_link
+# resource "google_compute_subnetwork" "existing_subnetwork" {
+#   name          = "gke-subnetwork"
+#   ip_cidr_range = "10.0.0.0/20"
+#   region        = "us-central1"
+#   network       = module.vpc.network_self_link
 
-  secondary_ip_range {
-    range_name    = "gke-subnetwork-pods"
-    ip_cidr_range = "10.1.0.0/16"
-  }
+#   secondary_ip_range {
+#     range_name    = "gke-subnetwork-pods"
+#     ip_cidr_range = "10.1.0.0/16"
+#   }
 
-  secondary_ip_range {
-    range_name    = "gke-subnetwork-services"
-    ip_cidr_range = "10.2.0.0/20"
-  }
-}
+#   secondary_ip_range {
+#     range_name    = "gke-subnetwork-services"
+#     ip_cidr_range = "10.2.0.0/20"
+#   }
+# }

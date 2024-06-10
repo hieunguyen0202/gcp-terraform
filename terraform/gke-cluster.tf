@@ -17,13 +17,13 @@ module "gke" {
   region                     = "us-central1"
   zones                      = ["us-central1-c"]
   network                    = module.vpc.network_self_link 
-  subnetwork                 = google_compute_subnetwork.existing_subnetwork.name
+  subnetwork                 = "subnet-01"
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true
   filestore_csi_driver       = false
-  ip_range_pods              = "gke-subnetwork-pods"
-  ip_range_services          = "gke-subnetwork-services"
+  ip_range_pods              = "subnet-01-secondary-01"
+  ip_range_services          = "subnet-01-secondary-02"
 
 
   node_pools = [
