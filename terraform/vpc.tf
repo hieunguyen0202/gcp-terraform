@@ -41,9 +41,9 @@ module "vpc" {
             },
         ]
 
-        subnet-02 = [
+        subnet-01 = [
             {
-                range_name    = "subnet-02-secondary-02"
+                range_name    = "subnet-01-secondary-02"
                 ip_cidr_range = "192.168.74.0/24"
             },
         ]
