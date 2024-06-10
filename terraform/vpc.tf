@@ -28,6 +28,7 @@ resource "google_compute_subnetwork" "default" {
 
 
 
+
 # module "vpc" {
 #   source  = "terraform-google-modules/network/google"
 #   version = "~> 9.1"
