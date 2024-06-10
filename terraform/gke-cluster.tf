@@ -39,7 +39,7 @@ module "gke" {
       logging_variant           = "DEFAULT"
       auto_repair               = true
       auto_upgrade              = true
-      service_account           = "project-service-account@<PROJECT ID>.iam.gserviceaccount.com"
+      service_account           = "gitops-sa@gitops-project-424508.iam.gserviceaccount.com"
       preemptible               = false
       initial_node_count        = 80
     },
