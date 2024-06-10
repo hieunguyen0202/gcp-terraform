@@ -1,25 +1,25 @@
-# resource "google_container_cluster" "default" {
-#   name = "gke-cluster"
+resource "google_container_cluster" "default" {
+  name = "gke-cluster"
 
-#   location                 = "us-central1"
-#   enable_autopilot         = false
-#   enable_l4_ilb_subsetting = true
+  location                 = "us-central1"
+  enable_autopilot         = false
+  enable_l4_ilb_subsetting = true
 
-#   network    = google_compute_network.default.id
-#   subnetwork = google_compute_subnetwork.default.id
+  network    = google_compute_network.default.id
+  subnetwork = google_compute_subnetwork.default.id
 
-#   ip_allocation_policy {
-#     # Use default stack type (IPv4)
-#     cluster_secondary_range_name  = google_compute_subnetwork.default.secondary_ip_range[0].range_name
-#     services_secondary_range_name = google_compute_subnetwork.default.secondary_ip_range[1].range_name
-#   }
+  ip_allocation_policy {
+    # Use default stack type (IPv4)
+    cluster_secondary_range_name  = google_compute_subnetwork.default.secondary_ip_range[0].range_name
+    services_secondary_range_name = google_compute_subnetwork.default.secondary_ip_range[1].range_name
+  }
 
-#   # Set initial node count
-#   initial_node_count = 1
+  # Set initial node count
+  initial_node_count = 1
 
-#   # Set deletion_protection
-#   deletion_protection = false
-# }
+  # Set deletion_protection
+  deletion_protection = false
+}
 
 
 
