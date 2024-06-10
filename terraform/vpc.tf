@@ -68,7 +68,7 @@ resource "google_compute_subnetwork" "subnetwork" {
   name          = "gke-subnetwork"
   ip_cidr_range = "10.0.0.0/20"
   region        = "us-central1"
-  network       = google_compute_network.vpc.self_link
+  network       = "gitops-vpc"
 
   secondary_ip_range {
     range_name    = "gke-subnetwork-pods"
