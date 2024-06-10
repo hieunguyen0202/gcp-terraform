@@ -64,22 +64,22 @@ module "vpc" {
 
 
 
-# resource "google_compute_subnetwork" "subnetwork" {
-#   name          = "us-central1-01"
-#   ip_cidr_range = "10.0.0.0/20"
-#   region        = "us-central1"
-#   network       = google_compute_network.vpc.self_link
+resource "google_compute_subnetwork" "subnetwork" {
+  name          = "gke-subnetwork"
+  ip_cidr_range = "10.0.0.0/20"
+  region        = "us-central1"
+  network       = google_compute_network.vpc.self_link
 
-#   secondary_ip_range {
-#     range_name    = "us-central1-01-gke-01-pods"
-#     ip_cidr_range = "10.1.0.0/16"
-#   }
+  secondary_ip_range {
+    range_name    = "gke-subnetwork-pods"
+    ip_cidr_range = "10.1.0.0/16"
+  }
 
-#   secondary_ip_range {
-#     range_name    = "us-central1-01-gke-01-services"
-#     ip_cidr_range = "10.2.0.0/20"
-#   }
-# }
+  secondary_ip_range {
+    range_name    = "gke-subnetwork-services"
+    ip_cidr_range = "10.2.0.0/20"
+  }
+}
 
 
 

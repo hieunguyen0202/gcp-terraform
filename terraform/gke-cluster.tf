@@ -43,13 +43,13 @@ module "gke" {
   region                     = "us-central1"
   zones                      = ["us-central1-c"]
   network                    = "gitops-vpc"
-  subnetwork                 = "subnet-01"
+  subnetwork                 = "gke-subnetwork"
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true
   filestore_csi_driver       = false
-  ip_range_pods              = "subnet-01-secondary-01"
-  ip_range_services          = "subnet-01-secondary-01"
+  ip_range_pods              = "gke-subnetwork-pods"
+  ip_range_services          = "gke-subnetwork-services"
 
 
   node_pools = [
