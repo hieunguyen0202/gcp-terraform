@@ -5,7 +5,7 @@ module "vpc" {
   version = "~> 9.1"
 
   project_id   = "gitops-project-424508"
-  network_name = "gitops-vpc-1"
+  network_name = "gitops-vpc"
   routing_mode = "GLOBAL"
 
   subnets = [
