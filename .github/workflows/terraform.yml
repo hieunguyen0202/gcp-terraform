@@ -69,9 +69,9 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
 
-      # Destroy Terraform resources if plan indicates deletion
-      - name: Terraform Destroy
-        if: ${{ github.ref == 'refs/heads/main' && steps.plan.outputs.exitcode == 1 }}
-        run: terraform destroy -auto-approve -input=false
-        env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+      # # Destroy Terraform resources if plan indicates deletion
+      # - name: Terraform Destroy
+      #   if: ${{ github.ref == 'refs/heads/main' && steps.plan.outputs.exitcode == 1 }}
+      #   run: terraform destroy -auto-approve -input=false
+      #   env:
+      #     GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
