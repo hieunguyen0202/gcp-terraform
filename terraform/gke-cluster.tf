@@ -1,31 +1,5 @@
 
 
-# resource "google_container_cluster" "default" {
-#   name = "my-gke-cluster"
-
-#   location                 = "us-central1"
-#   enable_autopilot         = false
-#   enable_l4_ilb_subsetting = true
-
-#   network    = "gitops-vpc"
-#   subnetwork = "subnet-01"
-#   initial_node_count = 2
-#   # Set `deletion_protection` to `true` will ensure that one cannot
-#   # accidentally delete this instance by use of Terraform.
-#   deletion_protection = false
-#   node_config {
-#     preemptible  = true
-#     machine_type = "e2-medium"
-
-#     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-#     service_account = "gitops-sa@gitops-project-424508.iam.gserviceaccount.com"
-#     oauth_scopes    = [
-#       "https://www.googleapis.com/auth/cloud-platform"
-#     ]
-#   }
-# }
-
-
 # google_client_config and kubernetes provider must be explicitly specified like the following.
 
 data "google_client_config" "default" {}
@@ -61,7 +35,7 @@ module "gke" {
       max_count                 = 3
       local_ssd_count           = 0
       spot                      = false
-      disk_size_gb              = 80
+      disk_size_gb              = 30
       disk_type                 = "pd-standard"
       image_type                = "COS_CONTAINERD"
       enable_gcfs               = false
@@ -71,7 +45,7 @@ module "gke" {
       auto_upgrade              = true
       service_account           = "gitops-sa@gitops-project-424508.iam.gserviceaccount.com"
       preemptible               = false
-      initial_node_count        = 80
+      initial_node_count        = 3
     },
   ]
 
