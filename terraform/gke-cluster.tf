@@ -15,8 +15,8 @@ module "gke" {
   zones                      = ["us-central1-c"]
   network                    = "gitops-vpc"
   subnetwork                 = "subnet-01"
-  ip_range_pods              = "us-central1-01-gke-01-pods"
-  ip_range_services          = "us-central1-01-gke-01-services"
+  ip_range_pods              = "10.10.10.0/26"
+  ip_range_services          = "10.10.10.0/28"
   http_load_balancing        = false
   network_policy             = false
   horizontal_pod_autoscaling = true
