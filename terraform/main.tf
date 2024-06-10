@@ -4,7 +4,6 @@ provider "google" {
 
 
 }
-
 # resource "google_storage_bucket" "my-bucket" {
 #   name                     = "no-public-access-bucket-m"
 #   location                 = "US"
