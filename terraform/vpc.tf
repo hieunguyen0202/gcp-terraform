@@ -8,7 +8,7 @@ resource "google_compute_network" "default" {
 resource "google_compute_subnetwork" "default" {
   name = "example-subnetwork"
 
-  ip_cidr_range = "10.0.0.0/16"
+  ip_cidr_range = "10.0.0.0/12"
   region        = "us-central1"
 
   stack_type       = "IPV4_IPV6"
@@ -17,12 +17,12 @@ resource "google_compute_subnetwork" "default" {
   network = google_compute_network.default.id
   secondary_ip_range {
     range_name    = "services-range"
-    ip_cidr_range = "192.168.0.0/24"
+    ip_cidr_range = "192.168.0.0/16"
   }
 
   secondary_ip_range {
     range_name    = "pod-ranges"
-    ip_cidr_range = "192.168.1.0/24"
+    ip_cidr_range = "192.168.1.0/16"
   }
 }
 
