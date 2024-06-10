@@ -21,10 +21,10 @@ terraform {
       version = "~> 2.23.0"
     }
   }
-  # backend "gcs" {
-  #   bucket = "my-gitops-project-state"
-  #   prefix = "terraform/state"
-  # }
+  backend "gcs" {
+    bucket = "my-gitops-project-state"
+    prefix = "terraform/state"
+  }
 
   required_version = ">= 1.6.0"
 }
