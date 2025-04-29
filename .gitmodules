@@ -1,3 +1,6 @@
 [submodule "repos/3-tier-terraform"]
 	path = repos/3-tier-terraform
 	url = https://github.com/hieunguyen0202/3-tier-terraform.git
+[submodule "repos/GitOps-iac-vprofile"]
+	path = repos/GitOps-iac-vprofile
+	url = https://github.com/hieunguyen0202/GitOps-iac-vprofile.git
