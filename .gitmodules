@@ -1,0 +1,3 @@
+[submodule "repos/3-tier-terraform"]
+	path = repos/3-tier-terraform
+	url = https://github.com/hieunguyen0202/3-tier-terraform.git
